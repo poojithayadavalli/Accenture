@@ -1,7 +1,6 @@
 """
 You are given 2 numbers (N , M); the task is to find N√M (Nth root of M).
 Constraints:
-1 <= T <= 200
 2 <= N <= 20
 1 <= M <= 109+5
 
