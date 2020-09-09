@@ -26,3 +26,17 @@ Output:
 
 Explanation: Some of the numbers of the Fibonacci numbers are 1, 1, 2, 3, 5, 8, 13 ..... (N stars from 1).
 """
+def fibo(n):
+    dp = [0 for i in range(n+3)]
+    dp[1] = 1
+    dp[2] = 1
+
+    for i in range(3,n+1):
+        dp[i]=dp[i-1]+dp[i-2] 
+
+    print(*dp[1:n+1])
+if __name__ == '__main__':
+    test_cases = int(input())
+    for cases in range(test_cases):
+        n = int(input())
+        fibo(n)
