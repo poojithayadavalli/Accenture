@@ -1,0 +1,41 @@
+"""
+Let us assume an array arr[]. We need to check if all the numbers of an array can be equalized to a particular number. In a single operation, any element of the array can be either multiplied by 2 or by 3. If it's possible to make all the array elements equal with the given operation then print Yes else print No.
+
+
+
+Example:
+
+Input:
+3
+50 75 100
+
+Output:
+Yes ->{50 * 2 * 3, 75 * 2 * 2, 100 * 3} = {300, 300, 300}
+
+Input:
+2
+10 14
+
+Output:
+No
+"""
+def make_equal(a,n):
+for i in range (n):
+while (a[i]%2 == 0):
+a[i] = a[i]/2
+
+while (a[i]%3 == 0):
+a[i] = a[i]/3
+
+for i in range (n):
+if a[i] != a[0]:
+return False
+return True
+num = int(input(“Enter the number of entries: “))
+arr = []
+for i in range(num):
+arr.append(int(input(“Enter the element:”)))
+if make_equal(arr, num):
+print(“Yes”)
+else:
+print(“No”)
